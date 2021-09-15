@@ -31,8 +31,8 @@ win_task:
 
   conda_script:
     - conda update -yn base conda
-    - conda install --yes -c conda-forge tbb vtk=9.0.3
+    - conda install --yes -c conda-forge pyopengl tbb vtk=9.0.3
 
-  # test_script:
+  test_script:
     - python -c "import vtk"
 
