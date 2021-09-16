@@ -6,36 +6,8 @@
 #   - https://hub.docker.com/_/gcc/
 #   - https://hub.docker.com/_/python/
 
-#
-# Testing (Windows)
-#
+
 win_task:
-  auto_cancellation: true
-  name: "Windows"
-  windows_container:
-    image: cirrusci/windowsservercore:cmake
-    os_version: 2019
-  env:
-    CONDA_LOCATION: $USERPROFILE\miniconda3
-    PATH: $CONDA_LOCATION;$CONDA_LOCATION\Library\bin;$CONDA_LOCATION\Scripts;$CONDA_LOCATION\condabin;$PATH
-    # must set this to its default since it doesn't work in env variables
-    # see https://github.com/cirruslabs/cirrus-ci-docs/issues/423
-    CIRRUS_WORKING_DIR: C:\Users\ContainerAdministrator\AppData\Local\Temp\cirrus-ci-build
-    PYTHON_ARCH: 64
-
-  choco_script:
-    - choco install -y miniconda3 --params="'/D:%CONDA_LOCATION%'"
-
-  conda_script:
-    - conda update -yn base conda
-    - conda install --yes -c conda-forge vtk=9.0.3
-
-  test_script:
-    - ps: ls $CONDA_LOCATION\Library\bin\vtkRenderingOpenGL2*.dll
-    - python -c "import vtk"
-
-
-win2_task:
   auto_cancellation: true
   name: "Windows"
   windows_container:
@@ -56,6 +28,8 @@ win2_task:
     - conda install --yes -c conda-forge vtk=9.0.3
 
   test_script:
+    - ps: Get-Command python
+    - echo %PATH%
+    - dir C:\Users\ContainerAdministrator\miniconda3\Library\bin\vtkRendering*.dll
     - ps: ls $CONDA_LOCATION\Library\bin\vtkRenderingOpenGL2*.dll
     - python -c "import vtk"
-
