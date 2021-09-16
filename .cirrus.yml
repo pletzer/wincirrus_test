@@ -33,5 +33,5 @@ win_task:
     - echo %PATH%
     - dir C:\Users\ContainerAdministrator\miniconda3\Library\bin\vtkRendering*.dll
     - python --version
-    - gflags /i C:\Users\ContainerAdministrator\miniconda3\Library\bin\vtkRenderingOpenGL2-9.0.dll +sls
+    # - gflags /i C:\Users\ContainerAdministrator\miniconda3\Library\bin\vtkRenderingOpenGL2-9.0.dll +sls
     - python -c "import vtk"
