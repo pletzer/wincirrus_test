@@ -31,5 +31,4 @@ win_task:
     - ps: Get-Command python
     - echo %PATH%
     - dir C:\Users\ContainerAdministrator\miniconda3\Library\bin\vtkRendering*.dll
-    - ps: ls $CONDA_LOCATION\Library\bin\vtkRenderingOpenGL2*.dll
     - python -c "import vtk"
