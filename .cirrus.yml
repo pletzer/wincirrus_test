@@ -19,7 +19,7 @@ win_task:
     PYTHON_ARCH: 64
 
   choco_script:
-    - choco install vcredist-all
+    - choco install -y vcredist-all
     - choco install -y miniconda3 --params="'/D:%CONDA_LOCATION%'"
 
   conda_script:
