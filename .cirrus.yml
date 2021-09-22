@@ -11,7 +11,8 @@ win_task:
   auto_cancellation: true
   name: "Windows"
   windows_container:
-    image: cirrusci/windowsservercore:2019
+    image: cirrusci/windowsservercore:cmake
+    ios_version: 2019
   env:
     # use $ not %...%
     CONDA_LOCATION: $USERPROFILE\miniconda3
@@ -32,6 +33,11 @@ win_task:
     - ps: Get-Command python
     - echo %PATH%
     - dir C:\Users\ContainerAdministrator\miniconda3\Library\bin\vtkRendering*.dll
+    - dir C:\Program Files (x86)
+    - dir C:\Program Files (x86)\Microsoft Visual Studio
+    - dir C:\Program Files (x86)\Microsoft Visual Studio\2019\
+    - dir C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\
+    - dir C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC
+    - dir C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30037\Hostx86\x86
     - python --version
-    # - gflags /i C:\Users\ContainerAdministrator\miniconda3\Library\bin\vtkRenderingOpenGL2-9.0.dll +sls
     - python -c "import vtk"
