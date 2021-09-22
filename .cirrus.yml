@@ -38,5 +38,8 @@ win_task:
     - dir "C:\Program Files (x86)\Microsoft Visual Studio"
     - dir "C:\Program Files (x86)\Microsoft Visual Studio\2019"
     - dir "C:\Program Files (x86)\Microsoft Visual Studio\2019\BuildTools"
+    - dir "C:\Program Files (x86)\Microsoft Visual Studio\2019\BuildTools\VC"
+    - dir "C:\Program Files (x86)\Microsoft Visual Studio\2019\BuildTools\VC\Tools"
+    - dir "C:\Program Files (x86)\Microsoft Visual Studio\2019\BuildTools\VC\Tools\MSVC"
     - python --version
     - python -c "import vtk"
