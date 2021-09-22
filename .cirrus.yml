@@ -34,11 +34,11 @@ win_task:
     - echo %PATH%
     - dir C:\Users\ContainerAdministrator\miniconda3\Library\bin\vtkRendering*.dll
     - dir C:\
-    - dir C:\Program Files (x86)\
-    - dir C:\Program Files\Microsoft Visual Studio
-    - dir C:\Program Files\Microsoft Visual Studio\2019\
-    - dir C:\Program Files\Microsoft Visual Studio\2019\Community\
-    - dir C:\Program Files\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC
-    - dir C:\Program Files\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30037\Hostx86\x86
+    - dir "C:\Program Files (x86)"
+    - dir "C:\Program Files (x86)\Microsoft Visual Studio"
+    - dir "C:\Program Files\Microsoft Visual Studio\2019"
+    - dir "C:\Program Files\Microsoft Visual Studio\2019\Community"
+    - dir "C:\Program Files\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC"
+    - dir "C:\Program Files\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30037\Hostx86\x86"
     - python --version
     - python -c "import vtk"
