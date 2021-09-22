@@ -34,7 +34,7 @@ win_task:
     - echo %PATH%
     - dir C:\Users\ContainerAdministrator\miniconda3\Library\bin\vtkRendering*.dll
     - dir C:\
-    - dir C:\Program Files\
+    - dir C:\Program Files (x86)\
     - dir C:\Program Files\Microsoft Visual Studio
     - dir C:\Program Files\Microsoft Visual Studio\2019\
     - dir C:\Program Files\Microsoft Visual Studio\2019\Community\
