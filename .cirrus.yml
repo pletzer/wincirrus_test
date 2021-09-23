@@ -16,7 +16,7 @@ win_task:
   env:
     # use $ not %...%
     CONDA_LOCATION: $USERPROFILE\miniconda3
-    PATH: $CONDA_LOCATION;$CONDA_LOCATION\Library\bin;$CONDA_LOCATION\Scripts;$CONDA_LOCATION\condabin;$PATH
+    PATH: $CONDA_LOCATION;$CONDA_LOCATION\Library\bin;$CONDA_LOCATION\Scripts;$CONDA_LOCATION\condabin;"C:\Program Files (x86)\Microsoft Visual Studio\2019\BuildTools\VC\Tools\MSVC\14.28.29910\bin\Hostx86\x86\";$PATH
     PYTHON_ARCH: 64
 
   choco_script:
@@ -45,5 +45,6 @@ win_task:
     - dir "C:\Program Files (x86)\Microsoft Visual Studio\2019\BuildTools\VC\Tools\MSVC\14.28.29910\bin"
     - dir "C:\Program Files (x86)\Microsoft Visual Studio\2019\BuildTools\VC\Tools\MSVC\14.28.29910\bin\Hostx86"
     - dir "C:\Program Files (x86)\Microsoft Visual Studio\2019\BuildTools\VC\Tools\MSVC\14.28.29910\bin\Hostx86\x86"
+    - dumpbin /dependents C:\Users\ContainerAdministrator\miniconda3\Library\bin\vtkRenderingOpenGL2-9.0.dll
     - python --version
     - python -c "import vtk"
