@@ -46,5 +46,8 @@ win_task:
     - dir "C:\Program Files (x86)\Microsoft Visual Studio\2019\BuildTools\VC\Tools\MSVC\14.28.29910\bin\Hostx86"
     - dir "C:\Program Files (x86)\Microsoft Visual Studio\2019\BuildTools\VC\Tools\MSVC\14.28.29910\bin\Hostx86\x86"
     - dumpbin /dependents C:\Users\ContainerAdministrator\miniconda3\Library\bin\vtkRenderingOpenGL2-9.0.dll
+    - where python
+    - conda list
+    - python -c "from ctypes import *; cdll.LoadLibrary(\"C:\Users\ContainerAdministrator\miniconda3\Library\bin\vtkRenderingOpenGL2-9.0.dll\")"
     - python --version
     - python -c "import vtk"
