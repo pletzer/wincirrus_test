@@ -48,6 +48,6 @@ win_task:
     - dumpbin /dependents C:\Users\ContainerAdministrator\miniconda3\Library\bin\vtkRenderingOpenGL2-9.0.dll
     - where python
     - conda list
-    - python -c "from ctypes import *; cdll.LoadLibrary('C:\Users\ContainerAdministrator\miniconda3\Library\bin\vtkRenderingOpenGL2-9.0.dll')"
+    - python -c "from ctypes import *; cdll.LoadLibrary('C:\\Users\\ContainerAdministrator\\miniconda3\\Library\\bin\\vtkRenderingOpenGL2-9.0.dll')"
     - python --version
     - python -c "import vtk"
